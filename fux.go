@@ -197,7 +197,7 @@ var (
 
 const (
 	clearLine = "\r\x1b[2K"
-	version   = "5.7"
+	version   = "4.3"
 )
 
 func main() {
@@ -1035,7 +1035,7 @@ func processTask(task RequestTask, isMutated bool) *Result {
 	errorCount.Store(0)
 
 	if res.Status == 403 && config.SmartEncode && !isMutated {
-		mutatedURL := mutatePayload(task.TargetURL, task.Payloads["FUZZ"])
+		mutatedURL := mutatePayload(task.TargetURL)
 		task.TargetURL = mutatedURL
 		mutatedRes := processTask(task, true)
 		if mutatedRes != nil && mutatedRes.Status != 403 {
@@ -1440,7 +1440,7 @@ func printResult(res Result) {
 }
 
 // --- UTILIDADES ---
-func mutatePayload(targetURL string, payload string) string {
+func mutatePayload(targetURL string) string {
 	u, err := url.Parse(targetURL)
 	if err != nil {
 		return targetURL

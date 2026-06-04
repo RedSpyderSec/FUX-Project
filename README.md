@@ -1,6 +1,6 @@
-# Fux Fuzzer (v5.7)
+# FUzzer Xtreme - FUX (v4.3)
 
-Fux es una herramienta de fuzzing modular, concurrente y de alto rendimiento escrita en Go, diseñada para auditorías de seguridad ofensivas y análisis de superficie de ataque. Permite descubrir directorios web, hosts virtuales (vhosts) y subdominios de forma extremadamente rápida, estable y eficiente en el uso de memoria RAM.
+FUX (FUzzer Xtreme) es una herramienta de fuzzing modular, concurrente y de alto rendimiento escrita en Go, diseñada para auditorías de seguridad ofensivas y análisis de superficie de ataque. Permite descubrir directorios web, hosts virtuales (vhosts) y subdominios de forma extremadamente rápida, estable y eficiente en el uso de memoria RAM.
 
 ---
 
